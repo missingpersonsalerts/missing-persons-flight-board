@@ -20207,7 +20207,8 @@ function lev(a,b){
 function tokenMatch(qt, tokens){
   for(var i=0;i<tokens.length;i++){
     var t = tokens[i];
-    if(t.indexOf(qt)>-1||qt.indexOf(t)>-1){return true;}
+    if(qt.length>=2 && t.indexOf(qt)>-1){return true;}
+    if(t.length>=3 && qt.indexOf(t)>-1){return true;}
     if(qt.length>=4){
       var lim = qt.length>=7?2:1;
       if(Math.abs(t.length-qt.length)<=lim && lev(qt,t)<=lim){return true;}
