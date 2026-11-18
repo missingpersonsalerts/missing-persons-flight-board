@@ -1,6 +1,6 @@
 /* The Alert Board — service worker.
    HTML is network-first (always fresh cases); assets are cache-first (fast + offline). */
-const CACHE = "mpa-alertboard-v2";
+const CACHE = "mpa-alertboard-v3";
 const CORE = ["./", "./index.html", "./manifest.json", "./logo.png"];
 
 self.addEventListener("install", (e) => {
